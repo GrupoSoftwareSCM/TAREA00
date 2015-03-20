@@ -23,7 +23,7 @@ int fstop; // variable flag
 int i;
 FILE* archivo;
 archivo = fopen ("numero.csv", "a");
-printf("ESTE ES EL KINO\n\n ");
+printf("Fichero generado con los numero aleatorios \n\n ");
 
 srand(time(NULL));
 
