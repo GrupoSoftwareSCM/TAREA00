@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 #define TAM 14
 
 int buscarNumero(int numero,int arreglo[],int tam){
@@ -15,7 +16,11 @@ return stop;
 }
 
 
-int main(int argc, char** argv) {
+int main(int argc,char *argv[]) {
+//char opcion[10];
+
+if(strcmp(argv,"-g"))
+{
 
 int num_alea; //variable aleatoria para comparaciones
 int numero[TAM]={-1}; // definir arreglo para numero aleatorios
@@ -61,4 +66,5 @@ fprintf(archivo,"%d;",numero[i]);}
 fprintf(archivo,"\n");
 fclose(archivo);
 return(EXIT_SUCCESS);
+}
 }
