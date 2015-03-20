@@ -17,12 +17,80 @@ return stop;
 
 int main(int argc, char** argv) {
 
+int opcion,exit=0;
+
+while(!exit)
+ {
+   menu();
+   printf("ingrese su opcion\n");
+   scanf("%d",&opcion);
+   ("\a");
+     switch (opcion)
+     {
+         case 1:
+         generar();
+         printf("kino generado!!!\n");
+         break;
+
+         case 2:
+         break;
+         case 3:
+
+         break;
+         case 4:
+
+         break;
+         case 5:
+         break;
+         case 6:
+
+         break;
+         case 7:
+
+         break;
+         case 8:
+
+         break;
+         case 9:
+         break;
+         case 10:
+         exit=1;
+         printf("*******************");
+         printf("\nHasta luego\n");
+         printf("*******************\n");
+         break;
+         default:
+         printf("\nopcion no valida\n");
+         break;
+     }
+
+ }
+
+return(EXIT_SUCCESS);
+}
+void menu ()
+{
+  printf("*********************************************************\n");
+  printf("\n");
+  printf("\t\tBienvenidos\n\n");
+  printf("\t\tMenu principal\n\n");
+  printf("1)Generar kino\n") ;
+  printf("2)\n");
+  printf("3)\n");
+  printf("4) \n");
+  printf("5)\n");
+  printf("6) \n");
+  printf("10)salir\n");
+  printf("***********************************************************\n");
+
+}
+
+void generar()
+{
 int num_alea; //variable aleatoria para comparaciones
 int numero[TAM]={-1}; // definir arreglo para numero aleatorios
 int fstop; // variable flag
 int i;
-
-printf("ESTE ES EL KINO\n\n ");
 
 srand(time(NULL));
 
@@ -52,9 +120,7 @@ for(i=0;i<TAM;i++){
 printf("%d)",i+1);
 printf(" %d\n",numero[i]);}
 
-return(EXIT_SUCCESS);
 }
-
 
 
 
