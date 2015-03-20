@@ -14,10 +14,7 @@ for (i=0;(i<tam && stop==0); i++){
 }
 return stop;
 }
-
-
 int main(int argc,char *argv[]) {
-//char opcion[10];
 
 if(strcmp(argv,"-g"))
 {
@@ -40,8 +37,6 @@ for(i=0;i<TAM;i++){
       }while(fstop);
 
       numero[i]=num_alea;
-    //  printf("%d)",i+1);     estos dos printf son para comprobar lo numero random
-    //  printf(" %d\n",numero[i]);
 }
 int j;
 for(i=0;i<TAM-1;i++){ // para ordenamiento
@@ -60,8 +55,6 @@ for(i=0;i<TAM-1;i++){ // para ordenamiento
     strftime(output,128,"%d-%m-%y %H:%M:%S",tlocal);
     fprintf(archivo,"%s;",output);
 for(i=0;i<TAM;i++){
-//printf("%d)",i+1);
-//printf(" %d\n",numero[i]);
 fprintf(archivo,"%d;",numero[i]);}
 fprintf(archivo,"\n");
 fclose(archivo);
