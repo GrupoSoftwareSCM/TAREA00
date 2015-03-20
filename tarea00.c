@@ -17,7 +17,6 @@ return stop;
 
 int main(int argc, char** argv) {
 
-int min= 1; int max= 25; //variables de entrada
 int num_alea; //variable aleatoria para comparaciones
 int numero[TAM]={-1}; // definir arreglo para numero aleatorios
 int fstop; // variable flag
@@ -29,29 +28,26 @@ srand(time(NULL));
 
 for(i=0;i<TAM;i++){
 
-    do{
-      num_alea=min+rand()%(max-min+1);
+      do{
+      num_alea=1+rand()%(25);
       fstop=buscarNumero(num_alea,numero,TAM);
-}while(fstop);
+      }while(fstop);
 
-numero[i]=num_alea;
-printf("%d)",i+1);
-printf(" %d\n",numero[i]);
-//printf("\n%d",numero[i]);
+      numero[i]=num_alea;
+    //  printf("%d)",i+1);     estos dos printf son para comprobar lo numero random
+    //  printf(" %d\n",numero[i]);
 }
 int j;
-for(i=0;i<TAM;i++){
-   for(j=0;j<TAM;j++){
-   if( numero[j]> numero[j+1])
+for(i=0;i<TAM-1;i++){ // para ordenamiento
+   for(j=i+1;j<TAM;j++){
+   if( numero[i]> numero[j])
    {
-   int temp= numero[j];
-   numero[j]= numero[j+1];
-   numero[j+1]=temp;
+   int temp= numero[i];
+   numero[i]= numero[j];
+   numero[j]=temp;
    }
    }
-   printf("%d\n",numero[i]);
-   system("pause");
-}
+  }
 for(i=0;i<TAM;i++){
 printf("%d)",i+1);
 printf(" %d\n",numero[i]);}
