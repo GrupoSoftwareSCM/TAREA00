@@ -16,7 +16,7 @@ return stop;
 }
 int main(int argc,char *argv[]) {
 
-if(strcmp(argv,"-g"))
+if(strcmp(argv[2],"-g"))
 {
 
 int num_alea; //variable aleatoria para comparaciones
