@@ -21,7 +21,8 @@ int num_alea; //variable aleatoria para comparaciones
 int numero[TAM]={-1}; // definir arreglo para numero aleatorios
 int fstop; // variable flag
 int i;
-
+FILE* archivo;
+archivo = fopen ("numero.csv", "a");
 printf("ESTE ES EL KINO\n\n ");
 
 srand(time(NULL));
@@ -48,9 +49,16 @@ for(i=0;i<TAM-1;i++){ // para ordenamiento
    }
    }
   }
+    time_t tiempo = time(0);
+    struct tm *tlocal = localtime(&tiempo);
+    char output[128];
+    strftime(output,128,"%d-%m-%y %H:%M:%S",tlocal);
+    fprintf(archivo,"%s;",output);
 for(i=0;i<TAM;i++){
-printf("%d)",i+1);
-printf(" %d\n",numero[i]);}
-
+//printf("%d)",i+1);
+//printf(" %d\n",numero[i]);
+fprintf(archivo,"%d;",numero[i]);}
+fprintf(archivo,"\n");
+fclose(archivo);
 return(EXIT_SUCCESS);
 }
