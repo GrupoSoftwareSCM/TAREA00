@@ -3,7 +3,7 @@ Simulacion de KINO
 ===============================
 Integrantes 
 
-Jean Cid Bustos
+Jean Cid Bustos\n
 Gabriel Sanhueza Alegria
 Oscar Muñoz Bernales
 
