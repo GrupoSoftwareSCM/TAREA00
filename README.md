@@ -4,9 +4,13 @@
 *** 
 Integrantes:  
 
-*Jean Cid Bustos
-*Gabriel Sanhueza Alegria
-*Oscar Muñoz Bernales
+Jean Cid Bustos  
+Gabriel Sanhueza Alegria  
+Oscar Muñoz Bernales  
+
+***
+Profesor:  
+Sebastián Salazar Molina  
 
 ***
 El problema del Azar  
