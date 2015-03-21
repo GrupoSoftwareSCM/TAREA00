@@ -1,11 +1,11 @@
 # TAREA00
 Simulacion de KINO
 ===============================
-Integrantes 
+Integrantes: 
 
-Jean Cid Bustos\n
-Gabriel Sanhueza Alegria
-Oscar Muñoz Bernales
+	Jean Cid Bustos
+	Gabriel Sanhueza Alegria
+	Oscar Muñoz Bernales
 
 ===============================
 
