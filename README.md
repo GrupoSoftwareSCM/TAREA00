@@ -3,7 +3,6 @@
 ##Universidad Tecnologica Metropolitana 
 *** 
 Integrantes:  
-
 Jean Cid Bustos  
 Gabriel Sanhueza Alegria  
 Oscar Muñoz Bernales  
