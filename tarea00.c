@@ -63,24 +63,29 @@ int main(int argc,char *argv[]) {
             else{
                 printf("SE INGRESARON MAL LOS PARAMETROS ... \n");
             }
-
         }
-        if(strcmp(argv[1],"-v") == 0 || strcmp(argv[1],"-V") == 0){
-            if(argc == 2){
-                printf("Integrantes:\n");
-                printf("\tJean Cid Bustos\n");
-                printf("\tGabriel Sanhueza Alegria\n");
-                printf("\tOscar Muñoz Bernales\n");
-                printf("Fecha de compilacion: ");
+        else{
+            if(strcmp(argv[1],"-v") == 0 || strcmp(argv[1],"-V") == 0){
+                if(argc == 2){
+                    printf("Integrantes:\n");
+                    printf("\tJean Cid Bustos\n");
+                    printf("\tGabriel Sanhueza Alegria\n");
+                    printf("\tOscar Muñoz Bernales\n");
+                    printf("Fecha de compilacion: ");
 
-                time_t tiempo = time(0);
-                struct tm *tlocal = localtime(&tiempo);
-                char output[128];
-                strftime(output,128,"%d/%m/%y %H:%M:%S",tlocal); //Fecha de compilacion.
-                printf("%s\n",output);
+                    time_t tiempo = time(0);
+                    struct tm *tlocal = localtime(&tiempo);
+                    char output[128];
+                    strftime(output,128,"%d/%m/%y %H:%M:%S",tlocal); //Fecha de compilacion.
+                    printf("%s\n",output);
+                }
+                else{
+                    printf("SE INGRESARON MAL LOS PARAMETROS ... \n");
+                }
             }
             else{
                 printf("SE INGRESARON MAL LOS PARAMETROS ... \n");
+                printf("TIENE QUE SER '-g' O '-v'\n");
             }
         }
     }
