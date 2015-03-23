@@ -27,7 +27,6 @@ int main(int argc,char *argv[]) {
                 int i;
                 FILE* archivo;
                 archivo = fopen ("numero.csv", "a");
-<<<<<<< HEAD
                 printf("**************************\n ");
                 printf("Sorteo generado !\n");
                 printf("**************************\n ");
@@ -61,37 +60,6 @@ int main(int argc,char *argv[]) {
                     printf("%d\n",numero[i]);
                 }
 
-=======
-                printf("Fichero generado con los numero aleatorios \n\n ");
-
-                srand(time(NULL));
-
-                for(i=0;i<TAM;i++){
-                    do{
-                        num_alea=1+rand()%(25);
-                        fstop=buscarNumero(num_alea,numero,TAM);
-                    }while(fstop);
-                    numero[i]=num_alea;
-                }
-                int j;
-                for(i=0;i<TAM-1;i++){ // para ordenamiento
-                    for(j=i+1;j<TAM;j++){
-                        if( numero[i]> numero[j]){
-                            int temp= numero[i];
-                            numero[i]= numero[j];
-                            numero[j]=temp;
-                        }
-                    }
-                }
-                time_t tiempo = time(0);
-                struct tm *tlocal = localtime(&tiempo);
-                char output[128];
-                strftime(output,128,"%d-%m-%y %H:%M:%S",tlocal);
-                fprintf(archivo,"%s;",output);
-                for(i=0;i<TAM;i++){
-                    fprintf(archivo,"%d;",numero[i]);
-                }
->>>>>>> 57415ec718049d2c17c351de579a151fe262d23b
                 fprintf(archivo,"\n");
                 fclose(archivo);
                 return(EXIT_SUCCESS);
@@ -99,7 +67,6 @@ int main(int argc,char *argv[]) {
             else{
                 printf("SE INGRESARON MAL LOS PARAMETROS ... \n");
             }
-<<<<<<< HEAD
 
         }
         if(strcmp(argv[1],"-v") == 0 || strcmp(argv[1],"-V") == 0){
@@ -118,31 +85,6 @@ int main(int argc,char *argv[]) {
             }
             else{
                 printf("SE INGRESARON MAL LOS PARAMETROS ... \n");
-=======
-        }
-        else{
-            if(strcmp(argv[1],"-v") == 0 || strcmp(argv[1],"-V") == 0){
-                if(argc == 2){
-                    printf("Integrantes:\n");
-                    printf("\tJean Cid Bustos\n");
-                    printf("\tGabriel Sanhueza Alegria\n");
-                    printf("\tOscar Muñoz Bernales\n");
-                    printf("Fecha de compilacion: ");
-
-                    time_t tiempo = time(0);
-                    struct tm *tlocal = localtime(&tiempo);
-                    char output[128];
-                    strftime(output,128,"%d/%m/%y %H:%M:%S",tlocal); //Fecha de compilacion.
-                    printf("%s\n",output);
-                }
-                else{
-                    printf("SE INGRESARON MAL LOS PARAMETROS ... \n");
-                }
-            }
-            else{
-                printf("SE INGRESARON MAL LOS PARAMETROS ... \n");
-                printf("TIENE QUE SER '-g' O '-v'\n");
->>>>>>> 57415ec718049d2c17c351de579a151fe262d23b
             }
         }
     }
